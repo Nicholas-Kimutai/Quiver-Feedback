@@ -4,27 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+  
     <title>Feedback</title>
 </head>
 <body>
     <div class="container">
 
+         <!-- Feedback modal -->
+         <div class="modal-feedback" id="feedback-modal">
+            <svg class="close-feedback-modal" aria-hidden="true" role="img" viewBox="0 0 24 24"><path fill="#ca0808" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293Z" clip-rule="evenodd"/></svg>
+            <div class="selection">
+                <h3>Fill Your Feedback Here</h3>
+                <form action="#" id="feedback-form">
+                   
+                    <div class="identity">
+                        <select id="identity" name="identity">
+                            <option value="identity" selected>Do you want to show your identity</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>   
+                        </select>
+                        
+                    </div>
+
+                    <div class="category-type">
+                        <select id="category" name="category">
+                            <option value="category" selected>Select your feedback category</option>
+                            <option value="recommendation">Recommendation</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="complain">Complain</option>
+
+                        </select>
+                    </div>
+                    <div class="feedback-message" id="message">
+                        <input type="text" name="details" placeholder="Leave your feedback message here...">
+                    </div>
+
+                    <div class="submit">
+                        <input class="submit" type="submit" value="Submit Feedback">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+
+
+        <!-- Confirmation popup -->
+        <div class="popupConfirmation" id="confirmation">
+            <img src="/images/checkmark.jpeg" height="60px" width="70px">
+            <h3>Thank you!</h3>
+            <p class="confirmation-text">Your feedback has been successfully  submitted!</p>
+            <button class="popclose" type="button">OK</button>
+        </div>
+        
+        <!-- Navbar section -->
         <div class="navbar">
+            <!-- <a href="#" >Post Feedback</a> -->
             <a href="#">Home Page</a>
-            <a href="#">Post Suggestion</a>
             <h2>DIGITAL SUGGESTION BOX</h2>
         </div>
 
+        <!-- Content section -->
         <div class="content">
             <div class="content1">
-                <h2>WELCOME TO DIGITAL SUGGESTION BOX </h2>
-                <img src="/images/HomeImage.jpeg">
-                <a href="#">CLICK TO POST FEEDBACK</a>
+                <div class="label">
+                    <p>WELCOME TO DIGITAL SUGGESTION BOX </p>
+                </div>
+                <img src="/images/HomeImage.jpeg"><br>
+                <button id="fill" stype="submit" class="modal-btn" > CLICK TO POST FEEDBACK</button> 
             </div>
             <div class="content1">
-                <h2>READ MORE ON DIGITAL SUGGESTION BOX</h2>
+                <div class="label">
+                    <p>READ MORE ON DIGITAL SUGGESTION BOX</p>
+                </div>
                 <div>
-                    <h2>READ THE INSTRUCTIONS BELOW: </h2>
+                    <h3>READ THE INSTRUCTIONS BELOW: </h3>
                     <ul>
                         <li>To help us serve you and have real time communication, the management strongly advice that you can make use of this digital suggestion box:</li>
                         <li>This is a digital platform that you can use to interact with the management real time on the issues that could affect you or others.</li>
@@ -36,10 +91,9 @@
             </div>
         </div>
 
-        <div class="footer">
-            <p>Copyright©2022, Vybo Technologies, All rights reserved.</p>
-
-        </div>
+        <!-- Footer section -->
+        
     </div>
+<script src="script.js"></script>
 </body>
 </html>

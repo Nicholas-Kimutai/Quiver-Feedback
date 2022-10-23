@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.navbar a{
+    color: black;
+    margin-inline: 5px;
+    text-decoration:none;
+    font-size: 20px;
+    float: inline-end;
+    float: right;
+}
+@media screen and (max-width:500px) {
+    .navbar a{
+        color: black;
+    margin-inline: 5px;
+    text-decoration:none;
+    font-size: 20px;
+    float: inline-end;
+    float: right;
+    }
+    
+}
+
+.navbar h2{
+    margin-top: 1%;
+    margin-left: 20%;
+    font-size: 28px;
+}
+@media screen and (max-width:500px) {
+    .navbar h2{
+        margin-top: 1%;
+        margin-left: 20%;
+        font-size: 28px;
+    }
+    
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+@media screen and(max-width:500px) {
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+.content .content1{
+    margin: 5px;
+    border: solid lightgreen 0.5px;
+    
+
+    
+}
+
+@media screen and (max-width:500px) {
+    .content .content1{
+        margin: 5px;
+        
+    }
+    
+}
+.content .content1 .label{
+    background-color: lightgreen;
+    height: 30px;
+}
+
+ @media screen and (max-width:500px) {
+    .content .content1 .label{
+        background-color: lightgreen;
+        height: 30px;
+    }
+    
+ }
+
+ .footer {
+    text-align: center;
+    position: fixed;
+
+ }
+
+ @media screen and (max-width:500px) {
+    .footer {
+        text-align: center;
+        position: fixed;
+    }
+    
+ }
+
+ /* - - - feedback-modal section - - - */
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.modal-feedback {
+    width: 70%;
+    height: 50vh;
+    padding: 5%;
+    background-color: #ffff;
+    position: fixed;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s;
+    transition: 0.5s ease-out;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   display: none;
+}
+@media screen and (max-width: 500px) {
+    .modal-feedback {
+        width: 70%;
+        height: 95vh;
+        padding: 10%;
+        background-color: #ffff;
+        position: fixed;
+        margin-top: 5%;
+        border-radius: 3vw;
+        box-shadow: 0 0 3vw rgba(0, 0, 0, 0.3);
+        animation: appear 0.5s;
+        transition: 0.5s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        display: none;
+    }
+}
+
+.modal-feedback.show{
+    display: flex;
+}
+
+#feedback-modal svg{
+    position: absolute;
+    width: 2vw;
+    left: 96%;
+    top: 3%;
+    cursor: pointer;
+    color: #ca0808;
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal svg{
+        position: absolute;
+        width: 10vw;
+        left: 85%;
+        top: 1.5%;
+        cursor: pointer;
+        color: #ca0808;
+    }
+}
+
+#feedback-modal h3 {
+    color: #ca0808;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal h3 {
+        color: #ca0808;
+        font-size: 5vw;
+        margin-bottom: 2%;
+    }
+}
+
+#feedback-modal .selection {
+    width: 50%;
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal .selection {
+        width: 100%;
+    }
+}
+
+#feedback-modal .selection form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal .selection form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+
+#feedback-modal .selection form div {
+    display: flex;
+    margin: 3% 0;
+}
+
+
+#feedback-modal .selection form .feedback-message input {
+    padding: 2% 3%;
+    font-size: 1vw;
+    width: 300px;
+    height: 100px;
+    border-radius: 5%;
+    outline: none;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal .selection form .feedback-message input {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        margin: 2% 0;
+        width: 100%;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+
+#feedback-modal .selection form .identity select {
+    padding: 2% 3%;
+    font-size: 1vw;
+    background-color: #f3f3f3;
+    width: 300px;
+    outline: none;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+    #feeback-modal .selection form .identity select {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        background-color: #f3f3f3;
+        width: 300px;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+#feedback-modal .selection form .category-type select {
+    padding: 2% 3%;
+    font-size: 1vw;
+    background-color: #f3f3f3;
+    width: 300px;
+    outline: none;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+    #feeback-modal .selection form .category-type select {
+        padding: 3% 5%;
+        font-size: 3.5vw;
+        background-color: #f3f3f3;
+        width: 300px;
+        outline: none;
+        border-radius: 2vw;
+        border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+
+#feedback-modal .selection form .submit input[type=submit]{
+    background-color: #ca0808;
+    color: #fff;
+    padding: 10% 20%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+@media screen and (max-width: 500px) {
+    #feedback-modal .selection form .submit input[type=submit]{
+        background-color: #ca0808;
+        color: #fff;
+        padding: 10% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 0;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+}
+
+
+/* Confirmation section */
+
+.popupConfirmation {
+    width: 20%;
+    height: auto;
+    margin-left: 20%;
+    padding: 5%;
+    background-color: #ffff;
+    position: fixed;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s;
+    transition: 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .popupConfirmation {
+        width: 80%;
+        height: auto;
+        padding: 7%;
+        background-color: #ffff;
+        position: fixed;
+        margin-top: 60%;
+        border-radius: 3vw;
+        box-shadow: 0 0 3vw rgba(0, 0, 0, 0.3);
+        animation: appear 0.5s;
+        transition: 0.5s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .popupConfirmation.open{
+        display: flex;
+        top:50%;
+    }
+    #confirmation h3 {
+        margin-top: 2%;
+        text-align: center;
+    }
+    
+}
+
+#confirmation p {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#confirmation button {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 1% 5%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+@media screen and (max-width: 500px) {
+    #confirmation button {
+        background-color: #ca0808;
+        color: #fff;
+        padding: 3% 20%;
+        outline: none;
+        border: 0.2vw solid #ca0808;
+        margin-top: 5%;
+        border-radius: 1.5vw;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+    
+}
+ 
+
