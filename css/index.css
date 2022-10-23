@@ -140,6 +140,13 @@
     display: flex;
 }
 
+@media screen and (max-width:500px) {
+
+    .modal-feedback.show{
+    display: flex;
+}
+}
+
 #feedback-modal svg{
     position: absolute;
     width: 2vw;
