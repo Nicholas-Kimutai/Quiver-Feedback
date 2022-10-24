@@ -9,7 +9,7 @@
 }
 
 /* - - - global properties - - - */
-p, li {
+p,li {
     font-size: 1vw;
     line-height: 1.7vw;
 }
@@ -29,6 +29,16 @@ h3 {
         font-size: 7vw;
     }
 }
+
+h4 {
+    font-size: 1.2vw;
+}
+@media screen and (max-width: 500px) {
+    h4 {
+        font-size: 7vw;
+    }
+}
+
 
 
 h3.menu {
@@ -209,8 +219,8 @@ main {
     }
 }
 .modal-feedback {
-    width: 50%;
-    height: 50vh;
+    width: 90%;
+    height: 80vh;
     padding: 5%;
     background-color: #ffff;
     position: fixed;
@@ -226,7 +236,7 @@ main {
 }
 @media screen and (max-width: 500px) {
     .modal-feedback {
-        width: 70%;
+        width: 90%;
         height: 95vh;
         padding: 10%;
         background-color: #ffff;
@@ -493,6 +503,78 @@ main {
         font-size: 3vw;
     }
     
+}
+
+
+/* - - - footer section - - - */
+footer{
+    width: 100%;
+    padding: 3% 10% 2% 10%;
+    background-color:aliceblue;
+}
+@media screen and (max-width: 500px) {
+    footer{
+        width: 100%;
+        padding: 7% 10% 5% 10%;
+        background-color: #f3f3f3;
+    }
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 500px) {
+    footer .social {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+footer .social svg {
+   width: 2vw;
+   margin: 0 1%;
+   color: #ca0808;
+}
+@media screen and (max-width: 500px) {
+    footer .social svg {
+        width: 6vw;
+        margin: 0 3%;
+        color: #ca0808;
+     }
+}
+
+footer .footer-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+@media screen and (max-width: 500px) {
+    footer .footer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2%;
+    }
+}
+
+footer .footer-text p {
+    font-size: 0.85vw;
+}
+@media screen and (max-width: 500px) {
+    footer .footer-text p {
+        font-size: 3vw;
+    }
 }
  
 
