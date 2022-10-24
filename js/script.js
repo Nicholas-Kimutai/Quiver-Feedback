@@ -3,9 +3,9 @@ var modalFeedback=document.querySelector('.modal-feedback');
 var modalClose=document.querySelector('.close-feedback-modal');
 
 
-var popup=document.querySelector('.submission');
-var openPopup=document.querySelector('.popupConfirmation');
-var popClose=document.querySelector('.popclose');
+// var popup=document.querySelector('.feedback-sumbit');
+// var openPopup=document.querySelector('.popupConfirmation');
+// var popClose=document.querySelector('.popclose');
 
 modalBtn.addEventListener('click',function(){
     modalFeedback.classList.add('show');
@@ -15,13 +15,14 @@ modalClose.addEventListener('click',function(){
     modalFeedback.classList.remove('show');
 });
 
-popup.addEventListener('click',function(){
-    modalFeedback.classList.add('open');
-});
 
-popClose.addEventListener('click',function(){
-    modalFeedback.classList.remove('open');
-});
+// popup.addEventListener('click',function(){
+//     openPopup.classList.add('open');
+// });
+
+// popClose.addEventListener('click',function(){
+//     openPopup.classList.remove('open');
+// });
 
 
 //Feedback submission validation
