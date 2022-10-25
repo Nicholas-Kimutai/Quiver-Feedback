@@ -22,7 +22,7 @@ let userMessage = document.querySelector("#message");
 
 /* - - - validation function - - - */
 function validation(fname,lname, phone, category, message) {
-    if (fname === "" || lname === "") {
+    if (fname === "" || lname === ""||message==="") {
         return [false, "Fill in your details in the all the fields"];
     }
     else if (category === "Select your feedback category") {

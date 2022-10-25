@@ -507,7 +507,7 @@ main {
 }
 @media screen and (max-width: 500px) {
     .popupConfirmation {
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 7%;
         background-color: #ffff;
