@@ -20,6 +20,20 @@ let userPhone = document.getElementById("phone");
 let userCategory = document.getElementById("category");
 let userMessage = document.getElementById("message");
 
+/* - - - validation function - - - */
+// function validation(fname,lname,category, message) {
+//     if (fname === "" || lname === ""||message==="") {
+//         return [false, "Fill in your details in the all the fields"];
+//     }
+//     else if (category === "category") {
+//         return [false, "Please select your feedback category"];
+//     }
+    
+//     else {
+//         return [true, "You"];
+//     }
+// }
+
 
 /* - - - form submission event - - - */
 form.addEventListener("submit", (e) => {

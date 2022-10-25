@@ -15,10 +15,9 @@
             <svg class="close-feedback-modal" aria-hidden="true" role="img" viewBox="0 0 24 24"><path fill="#ca0808" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293Z" clip-rule="evenodd"/></svg>
             <div class="selection">
                 <h3>Fill Your Feedback Here</h3>
-                <form action="#" method="post" id="feedback-form">
+                <form action="./php/index.php" method="post" id="feedback-form">
                     <div class="fullname">
-                        <input type="text" name="fname" id="fname" placeholder="First Name" required>
-                        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                        <input type="text" name="fname" id="fname" placeholder="Name(optional)" >
                     </div>
                     <div class="phone">
                         <input type="text" type="number" name="phone" id="phone" placeholder="Phone Number(Optional)">
@@ -34,7 +33,7 @@
                         </select>
                     </div>
                     <div class="feedback-message">
-                        <input id="message" type="text" name="details" placeholder="Leave your feedback message here..." required>
+                        <input id="message" type="text" name="message" placeholder="Leave your feedback message here..." required>
                     </div>
 
                     <div class="submit">
