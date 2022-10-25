@@ -448,9 +448,9 @@ main {
 @media screen and (max-width: 500px) {
     #feeback-modal .selection form .category-type select {
         padding: 3% 5%;
-        font-size: 3.5vw;
+        font-size: 5vw;
         background-color: #f3f3f3;
-        width: 300px;
+        width: 200px;
         outline: none;
         border-radius: 2vw;
         border: 0.1vw solid rgba(0, 0, 0, 0.5);
