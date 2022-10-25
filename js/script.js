@@ -1,53 +1,71 @@
-var modalBtn=document.querySelector('.modal-btn');
-var modalFeedback=document.querySelector('.modal-feedback');
-var modalClose=document.querySelector('.close-feedback-modal');
+
+/* - - - getting current year on the footer - - - */
+let footerYear = document.querySelector(".current-year");
+let currentYear = new Date;
+footerYear.innerHTML = String(currentYear.getFullYear());
+
+// Modal variables
+let modalShow=document.querySelector('.modal-btn');
+let modalFeedback=document.querySelector('.modal-feedback');
+let modalClose=document.querySelector('.close-feedback-modal');
+let feedbackConfirmation = document.querySelector("#feedbackSubmission");
+let feedbackCompletionModal = document.querySelector("#confirmation");
+let feedbackCompletion = document.querySelector("#feedComplete");
+
+/* - - - form variables - - -  */
+let form = document.querySelector("#feedback-form");
+let firstName = document.querySelector("fName");
+let lastName = document.querySelector("#lName");
+let userPhone = document.querySelector("#phone");
+let userCategory = document.querySelector("#category");
+let userMessage = document.querySelector("#message");
+
+/* - - - validation function - - - */
+function validation(fname,lname, phone, category, message) {
+    if (fname === "" || lname === "") {
+        return [false, "Fill in your details in the all the fields"];
+    }
+    else if (category === "Select your feedback category") {
+        return [false, "Please select your feedback category"];
+    }
+    
+    else {
+        return [true, "Thank you!"];
+    }
+}
 
 
-// var popup=document.querySelector('.feedback-sumbit');
-// var openPopup=document.querySelector('.popupConfirmation');
-// var popClose=document.querySelector('.popclose');
-
-modalBtn.addEventListener('click',function(){
-    modalFeedback.classList.add('show');
+/* - - - form submission event - - - */
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)[0]) {
+        alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)[1]);
+        return;
+    }
 });
 
-modalClose.addEventListener('click',function(){
-    modalFeedback.classList.remove('show');
+/* - - - modal related DOM event listeners - - - */
+modalClose.addEventListener("click", () => {
+    modalFeedback.style.display = "none";
+});
+modalShow.addEventListener("click", () => {
+    modalFeedback.style.display = "flex";
 });
 
 
-// popup.addEventListener('click',function(){
-//     openPopup.classList.add('open');
-// });
+feedbackConfirmation.addEventListener("click", () => {
+    modalFeedback.style.display = "none";
+    // if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)) {
+    //     alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value));
+    //     return;
+    // }
+    // else {
+    //     feedbackCompletionModal.style.display = "flex";
+    // }
+    feedbackCompletionModal.style.display = "flex";
 
-// popClose.addEventListener('click',function(){
-//     openPopup.classList.remove('open');
-// });
-
-
-//Feedback submission validation
-// function formSub(){
-//     preventDefault();
-//     var identity=document.getElementById("identity").value;
-//     var category=document.getElementById("category").value;
-//     var message=document.getElementById("message").value;
-
-//     if(identity=="identity"){
-//         swal("Please select your identity")
-//     }
-//     else if(category=="category"){
-//         alert("Please select feedback")
-//     }
-//     else if(message==""){
-//         alert("Please enter your message")
-//     }
-//     else{
-        
-//     }
-//  }
-
-//  //Email validation
-// function validMail($email) {
-//     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-//     return emailReg.test($email);
-//   }
+});
+feedbackCompletion.addEventListener("click", () => {
+    feedbackCompletionModal.style.display = "none";
+    window.location.reload();
+});

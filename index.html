@@ -26,8 +26,8 @@
                     </div> -->
 
                     <div class="fullname">
-                        <input type="text" name="name" id="name" placeholder="First Name">
-                        <input type="email" name="email" id="email" placeholder="Last Name">
+                        <input type="text" name="fname" id="fname" placeholder="First Name">
+                        <input type="text" name="lname" id="lname" placeholder="Last Name">
                     </div>
                     <div class="phone">
                         <input type="text" name="phone" id="phone" placeholder="Phone Number(Optional)">
@@ -42,12 +42,12 @@
 
                         </select>
                     </div>
-                    <div class="feedback-message" id="message">
-                        <input type="text" name="details" placeholder="Leave your feedback message here...">
+                    <div class="feedback-message">
+                        <input id="message" type="text" name="details" placeholder="Leave your feedback message here...">
                     </div>
 
                     <div class="submit">
-                        <input type="submit" value="submit Feedback">
+                        <input id="feedbackSubmission" type="submit" value="submit Feedback">
                     </div>
                 </form>
             </div>
@@ -60,7 +60,7 @@
             <img src="./images/checkmark.jpeg" height="60px" width="70px">
             <h3>Thank you!</h3>
             <p class="confirmation-text">Your feedback has been successfully  submitted!</p>
-            <button class="popclose" type="button">OK</button>
+            <button id="feedComplete"class="popclose" type="button">OK</button>
         </div>
         
         
