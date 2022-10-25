@@ -16,15 +16,22 @@
             <div class="selection">
                 <h3>Fill Your Feedback Here</h3>
                 <form action="#" id="feedback-form">
-                    <div class="identity">
+                    <!-- <div class="identity">
                         <select id="identity" name="identity">
                             <option value="identity" selected>Do you want to show your identity</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>   
                         </select>
                         
-                    </div>
+                    </div> -->
 
+                    <div class="fullname">
+                        <input type="text" name="name" id="name" placeholder="First Name">
+                        <input type="email" name="email" id="email" placeholder="Last Name">
+                    </div>
+                    <div class="phone">
+                        <input type="text" name="phone" id="phone" placeholder="Phone Number(Optional)">
+                    </div>
                     <div class="category-type">
                         <select id="category" name="category">
                             <option value="category" selected>Select your feedback category</option>
@@ -39,9 +46,9 @@
                         <input type="text" name="details" placeholder="Leave your feedback message here...">
                     </div>
 
-                    <!-- <div class="submit"> -->
-                        <button class="feedback-submit" type="submit" >submit Feedback</button>
-                    <!-- </div> -->
+                    <div class="submit">
+                        <input type="submit" value="submit Feedback">
+                    </div>
                 </form>
             </div>
             
