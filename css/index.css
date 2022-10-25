@@ -256,9 +256,6 @@ main {
     }
 }
 
-.modal-feedback.show{
-    display: flex;
-}
 
 @media screen and (max-width:500px) {
 
@@ -491,9 +488,9 @@ main {
 /* Confirmation section */
 
 .popupConfirmation {
-    width: 60%;
+    width: 50%;
     height: auto;
-    margin-left: 20%;
+    margin-left: 5%;
     padding: 5%;
     background-color: #ffff;
     position: fixed;
@@ -510,7 +507,7 @@ main {
 }
 @media screen and (max-width: 500px) {
     .popupConfirmation {
-        width: 80%;
+        width: 50%;
         height: auto;
         padding: 7%;
         background-color: #ffff;
@@ -527,10 +524,7 @@ main {
         display: none;
     }
 
-    .popupConfirmation.open{
-        display: flex;
-        
-    }  
+    
     #confirmation h3 {
         margin-top: 2%;
         text-align: center;

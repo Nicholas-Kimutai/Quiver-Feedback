@@ -38,8 +38,8 @@ function validation(fname,lname, phone, category, message) {
 /* - - - form submission event - - - */
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)[0]) {
-        alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)[1]);
+    if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)) {
+        alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value));
         return;
     }
 });
