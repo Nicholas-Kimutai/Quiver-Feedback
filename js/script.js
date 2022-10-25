@@ -13,35 +13,21 @@ let feedbackCompletionModal = document.querySelector("#confirmation");
 let feedbackCompletion = document.querySelector("#feedComplete");
 
 /* - - - form variables - - -  */
-let form = document.querySelector("#feedback-form");
-let firstName = document.querySelector("fName");
-let lastName = document.querySelector("#lName");
-let userPhone = document.querySelector("#phone");
-let userCategory = document.querySelector("#category");
-let userMessage = document.querySelector("#message");
-
-/* - - - validation function - - - */
-function validation(fname,lname, phone, category, message) {
-    if (fname === "" || lname === ""||message==="") {
-        return [false, "Fill in your details in the all the fields"];
-    }
-    else if (category === "Select your feedback category") {
-        return [false, "Please select your feedback category"];
-    }
-    
-    else {
-        return [true, "Thank you!"];
-    }
-}
+let form = document.getElementById("feedback-form");
+let firstName = document.getElementById("fName");
+let lastName = document.getElementById("lName");
+let userPhone = document.getElementById("phone");
+let userCategory = document.getElementById("category");
+let userMessage = document.getElementById("message");
 
 
 /* - - - form submission event - - - */
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)) {
-        alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value));
-        return;
-    }
+    
+    modalFeedback.style.display = "none";
+    feedbackCompletionModal.style.display = "flex";
+    
 });
 
 /* - - - modal related DOM event listeners - - - */
@@ -52,19 +38,6 @@ modalShow.addEventListener("click", () => {
     modalFeedback.style.display = "flex";
 });
 
-
-feedbackConfirmation.addEventListener("click", () => {
-    modalFeedback.style.display = "none";
-    // if (!validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value)) {
-    //     alert(validation(firstName.value,lastName.value, userPhone.value, userCategory.value, userMessage.value));
-    //     return;
-    // }
-    // else {
-    //     feedbackCompletionModal.style.display = "flex";
-    // }
-    feedbackCompletionModal.style.display = "flex";
-
-});
 feedbackCompletion.addEventListener("click", () => {
     feedbackCompletionModal.style.display = "none";
     window.location.reload();
