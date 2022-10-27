@@ -23,12 +23,12 @@ let userMessage = document.getElementById("message");
 
 
 /* - - - form submission event - - - */
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     modalFeedback.style.display = "none";
-//     feedbackCompletionModal.style.display = "flex";
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    modalFeedback.style.display = "none";
+    feedbackCompletionModal.style.display = "flex";
     
-// });
+});
 
 /* - - - modal related DOM event listeners - - - */
 modalClose.addEventListener("click", () => {

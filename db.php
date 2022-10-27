@@ -1,6 +1,13 @@
 <?php
-$conn=mysqli_connect("127.0.0.1","root","",); 
-$db=mysqli_select_db($conn,'quiver');
+
+$servername = "localhost";
+$username = "maralinks1_quiverAdmin";
+$password = "Quiver2022";
+
+
+$conn=mysqli_connect($servername,$username,$password); 
+$db=mysqli_select_db($conn,'maralinks1_feedbackDB');
+
 
 
 if(isset($_POST['feedsub']))
