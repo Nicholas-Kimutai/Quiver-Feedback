@@ -20,29 +20,15 @@ let userPhone = document.getElementById("phone");
 let userCategory = document.getElementById("category");
 let userMessage = document.getElementById("message");
 
-/* - - - validation function - - - */
-// function validation(fname,lname,category, message) {
-//     if (fname === "" || lname === ""||message==="") {
-//         return [false, "Fill in your details in the all the fields"];
-//     }
-//     else if (category === "category") {
-//         return [false, "Please select your feedback category"];
-//     }
-    
-//     else {
-//         return [true, "You"];
-//     }
-// }
 
 
 /* - - - form submission event - - - */
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     modalFeedback.style.display = "none";
+//     feedbackCompletionModal.style.display = "flex";
     
-    modalFeedback.style.display = "none";
-    feedbackCompletionModal.style.display = "flex";
-    
-});
+// });
 
 /* - - - modal related DOM event listeners - - - */
 modalClose.addEventListener("click", () => {
@@ -56,3 +42,6 @@ feedbackCompletion.addEventListener("click", () => {
     feedbackCompletionModal.style.display = "none";
     window.location.reload();
 });
+
+
+

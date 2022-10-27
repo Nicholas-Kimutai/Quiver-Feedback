@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +16,9 @@
             <svg class="close-feedback-modal" aria-hidden="true" role="img" viewBox="0 0 24 24"><path fill="#ca0808" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1Zm3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293Z" clip-rule="evenodd"/></svg>
             <div class="selection">
                 <h3>Fill Your Feedback Here</h3>
-                <form action="./php/index.php" method="post" id="feedback-form">
+                <form action="db.php" method="post" id="feedback-form">
                     <div class="fullname">
-                        <input type="text" name="fname" id="fname" placeholder="Name(optional)" >
+                        <input type="text" name="name" id="name" placeholder="Name(optional)" >
                     </div>
                     <div class="phone">
                         <input type="text" type="number" name="phone" id="phone" placeholder="Phone Number(Optional)">
@@ -37,21 +38,13 @@
                     </div>
 
                     <div class="submit">
-                        <input id="feedbackSubmission" type="submit" value="submit Feedback">
+                        <input id="feedbackSubmission" name="feedsub"type="submit" value="submit Feedback">
                     </div>
                 </form>
             </div>
             
         </div>
 
-
-        <!-- Confirmation popup -->
-        <div class="popupConfirmation" id="confirmation">
-            <img src="./images/checkmark.jpeg" height="60px" width="70px">
-            <h3>Thank you!</h3>
-            <p class="confirmation-text">Your feedback has been successfully  submitted!</p>
-            <button id="feedComplete"class="popclose" type="button">OK</button>
-        </div>
         
         
         <section id="about">
